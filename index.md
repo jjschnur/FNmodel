@@ -4,6 +4,13 @@
 2. Press "Calculate Risk" to generate model risk output. 
 
 
+| Predictor     | Input Value   |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+Button: Calculate
+[ ]
 
 <!--
 You can use the [editor on GitHub](https://github.com/jjschnur/FNmodel/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
