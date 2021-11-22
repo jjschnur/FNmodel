@@ -1,16 +1,19 @@
+<style type="text/css">
+  * {text-align:center;}
+  h3 {color:blue;}
+</style>
+
 ### Risk Prediction for Septic Shock and/or Bacteremia in Pediatric Oncology Patients Presenting with Fever and Neutropenia
 
 1. Enter your patient's information in the table.
 2. Press "Calculate Risk" to generate model risk output. 
 
-<div>
   
 | Predictor     | Input Value   |
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
 
-</div>
 
 <div> Button: Calculate </div>
 
