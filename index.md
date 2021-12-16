@@ -15,7 +15,7 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 2px 2px;
+  //margin: 2px 2px;
   cursor: pointer;
   background-color: #008CBA;
 }
