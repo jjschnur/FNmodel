@@ -2,7 +2,7 @@
  * {text-align:center;}
  h2 {color:black;} 
  h4 {text-align: left;}
- ol {text-align: left;}
+ ol, li {text-align: left;}
  table {text-align: left;}
  div {text-align: left;}
 </style>
