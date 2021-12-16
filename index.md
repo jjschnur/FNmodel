@@ -43,11 +43,11 @@ p {text-align: left;}
     <td><input type="checkbox" id="relapse" name="relapse" value="1.162"> </td>
   </tr>
  <tr>
-    <td>Hemoglobin <= 6.95 g/dL</td>
+    <td>Hemoglobin <u><</u> 6.95 g/dL</td>
     <td><input type="checkbox" id="hemo" name="hemo" value="1.048"> </td>
   </tr>
  <tr>
-    <td>Platelets <= 79,000/μL</td>
+    <td>Platelets <u><</u> 79,000/μL</td>
     <td><input type="checkbox" id="platelets" name="platelets" value="0.89"> </td>
   </tr>
  <tr>
@@ -59,15 +59,15 @@ p {text-align: left;}
     <td><input type="checkbox" id="age" name="age" value="0.596"> </td>
   </tr>
  <tr>
-    <td>Absolute Monocyte Count <= 53</td>
+    <td>Absolute Monocyte Count <u><</u> 53</td>
     <td><input type="checkbox" id="amc" name="amc" value="0.514"> </td>
   </tr>
  <tr>
-    <td>Absolute Neutrophil Count <= 55</td>
+    <td>Absolute Neutrophil Count <u><</u> 55</td>
     <td><input type="checkbox" id="anc" name="anc" value="0.178"> </td>
   </tr>
  <tr>
-    <td>Leukocyte Count <= 650</td>
+    <td>Leukocyte Count <u><</u> 650</td>
     <td><input type="checkbox" id="leuk" name="leuk" value="0.417"> </td>
   </tr>
  <tr>
