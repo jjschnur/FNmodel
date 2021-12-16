@@ -23,17 +23,17 @@
 <script>
  function changeScore(id) {
  
-  var hemat = JSON.parse(document.getElementById("hemat").value) * document.getElementById("hemat").checked;
-  var relapse = JSON.parse(document.getElementById("relapse").value) * document.getElementById("relapse").checked;
-  var hemo = JSON.parse(document.getElementById("hemo").value) * document.getElementById("hemo").checked;
-  var platelets = JSON.parse(document.getElementById("platelets").value) * document.getElementById("platelets").checked;
-  var gsf = JSON.parse(document.getElementById("gsf").value) * document.getElementById("gsf").checked;
-  var age = JSON.parse(document.getElementById("age").value) * document.getElementById("age").checked;
-  var amc = JSON.parse(document.getElementById("amc").value) * document.getElementById("amc").checked;
-  var anc = JSON.parse(document.getElementById("anc").value) * document.getElementById("anc").checked;
-  var leuk = JSON.parse(document.getElementById("leuk").value) * document.getElementById("leuk").checked;
-  var days = JSON.parse(document.getElementById("days").value) * document.getElementById("days").checked;
-  var sex = JSON.parse(document.getElementById("sex").value) * document.getElementById("sex").checked;
+  var hemat = parseFloat(document.getElementById("hemat").value) * document.getElementById("hemat").checked;
+  var relapse = parseFloat(document.getElementById("relapse").value) * document.getElementById("relapse").checked;
+  var hemo = parseFloat(document.getElementById("hemo").value) * document.getElementById("hemo").checked;
+  var platelets = parseFloat(document.getElementById("platelets").value) * document.getElementById("platelets").checked;
+  var gsf = parseFloat(document.getElementById("gsf").value) * document.getElementById("gsf").checked;
+  var age = parseFloat(document.getElementById("age").value) * document.getElementById("age").checked;
+  var amc = parseFloat(document.getElementById("amc").value) * document.getElementById("amc").checked;
+  var anc = parseFloat(document.getElementById("anc").value) * document.getElementById("anc").checked;
+  var leuk = parseFloat(document.getElementById("leuk").value) * document.getElementById("leuk").checked;
+  var days = parseFloat(document.getElementById("days").value) * document.getElementById("days").checked;
+  var sex = parseFloat(document.getElementById("sex").value) * document.getElementById("sex").checked;
   var const = -3.228;
   
   var risk = (1/(1 + Math.exp(-(hemat+relapse+hemo+platelets+gsf+age+amc+anc+leuk+days+sex+const))).toFixed(4);
