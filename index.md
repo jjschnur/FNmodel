@@ -6,7 +6,7 @@
  ol, li {text-align: left;}
  table {text-align: left;}
  div {text-align: left;
-      display: inline-block;
+      //display: inline-block;
  }
  .button {
   border: none;
@@ -84,7 +84,7 @@
 
 <div>  
  <button style="float:left;" class="button" id="calcbutton"> Calculate Score </button>
- <p style="float:right; padding: 15px 15px;" id="riskscore">Risk Score: N/A </p>
+ <p style="float:left; padding: 15px 15px;" id="riskscore">Risk Score: N/A </p>
 </div>
 
 <!-- JavaScript Stuff -->
