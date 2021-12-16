@@ -38,12 +38,12 @@
   var sex = parseFloat(document.getElementById("sex").value) * document.getElementById("sex").checked;
   let constant = -3.228;
   
-  var risk = (1/(1 + Math.exp(-(hemat+relapse+hemo+platelets+gsf+age+amc+anc+leuk+days+sex+constant))).toFixed(4);
+  let risk = (1/(1 + Math.exp(-(hemat+relapse+hemo+platelets+gsf+age+amc+anc+leuk+days+sex+constant))).toFixed(4);
   var level;
   if(risk >= 0.3820){
-      level = "    (High Risk)";
+      let level = "    (High Risk)";
   }else {
-      level = "    (Low Risk)";
+      let level = "    (Low Risk)";
   }
   document.getElementById("riskscore").innerHTML = "Risk Score: " + risk + level;
  }
