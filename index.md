@@ -5,8 +5,7 @@
  h4 {text-align: left;}
  ol, li {text-align: left;}
  table {text-align: left;}
- div {text-align: left;
-      //display: inline-block;
+ div {text-align: left; //display: inline-block;
  }
  .button {
   border: none;
@@ -83,8 +82,8 @@
 </table>
 
 <div>  
- <button style="float:left;" class="button" id="calcbutton"> Calculate Score </button>
- <p style="float:left; padding: 15px 15px;" id="riskscore">Risk Score: N/A </p>
+ <button class="button" id="calcbutton"> Calculate Score </button>
+ <p id="riskscore">Risk Score: N/A </p>
 </div>
 
 <!-- JavaScript Stuff -->
