@@ -34,7 +34,7 @@
 <table>
   <tr>
     <th>Predictor</th>
-    <th>Check if yes:</th>
+    <th>Check if true:</th>
   </tr>
  <tr>
     <td>Hematological Malignancy</td>
