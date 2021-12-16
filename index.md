@@ -23,17 +23,17 @@
 <script>
  function changeScore(id) {
  
-  var hemat = JSON.parse(document.getElementById("hemat"));
-  var relapse = JSON.parse(document.getElementById("relapse"));
-  var hemo = JSON.parse(document.getElementById("hemo"));
-  var platelets = JSON.parse(document.getElementById("platelets"));
-  var gsf = JSON.parse(document.getElementById("gsf"));
-  var age = JSON.parse(document.getElementById("age"));
-  var amc = JSON.parse(document.getElementById("amc"));
-  var anc = JSON.parse(document.getElementById("anc"));
-  var leuk = JSON.parse(document.getElementById("leuk"));
-  var days = JSON.parse(document.getElementById("days"));
-  var sex = JSON.parse(document.getElementById("sex"));
+  var hemat = JSON.parse(document.getElementById("hemat").value);
+  var relapse = JSON.parse(document.getElementById("relapse").value);
+  var hemo = JSON.parse(document.getElementById("hemo").value);
+  var platelets = JSON.parse(document.getElementById("platelets").value);
+  var gsf = JSON.parse(document.getElementById("gsf").value);
+  var age = JSON.parse(document.getElementById("age").value);
+  var amc = JSON.parse(document.getElementById("amc").value);
+  var anc = JSON.parse(document.getElementById("anc").value);
+  var leuk = JSON.parse(document.getElementById("leuk").value);
+  var days = JSON.parse(document.getElementById("days").value);
+  var sex = JSON.parse(document.getElementById("sex").value);
   var const = -3.228;
   
   var risk = 1/(1 + Math.exp(-(hemat+relapse+hemo+platelets+gsf+age+amc+anc+leuk+days+sex+const)))
@@ -47,7 +47,7 @@
 #### Instructions:
 <ol>
  <li>Check each risk factor that applies to your patient in the table.</li>
- <li>The model will automatically calculate your patient's risk output as new risk factors are selected.</li>
+ <li>Click "Calculate Score" button to generate risk output.</li>
 </ol> 
   
 <table>
@@ -102,8 +102,8 @@
 </table>
 
 <div>  <button class="button" onclick="changeScore(riskscore)"> Calculate Score </button> </div>
-<div> Risk Score: <p id='riskscore'> 0 </p> </div>
-<div> Risk Category:  <p id='riskcat'> N/A </p> </div>
+<div> Risk Score: <p id="riskscore"> 0 </p> </div>
+<div> Risk Category:  <p id="riskcat"> N/A </p> </div>
 
 <!--
 You can use the [editor on GitHub](https://github.com/jjschnur/FNmodel/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
