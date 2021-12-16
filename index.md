@@ -17,18 +17,55 @@
     <th>Predictor</th>
     <th>Check if yes:</th>
   </tr>
-  <tr>
-    <td>Age (Years)</td>
-    <td><input type="checkbox" id="age" name="age" value="Age"> </td>
+ <tr>
+    <td>Hematological Malignancy</td>
+    <td><input type="checkbox" id="hemat" name="hemat" value="Hematological"> </td>
+  </tr>
+ <tr>
+    <td>Cancer Relapse</td>
+    <td><input type="checkbox" id="relapse" name="relapse" value="Relapse"> </td>
+  </tr>
+ <tr>
+    <td>Hemoglobin <= 6.95 g/dL</td>
+    <td><input type="checkbox" id="hemo" name="hemo" value="Hemoglobin"> </td>
+  </tr>
+ <tr>
+    <td>Platelets <= 79,000/μL</td>
+    <td><input type="checkbox" id="platelets" name="platelets" value="Platelets"> </td>
+  </tr>
+ <tr>
+    <td>Growth Stimulating Factor</td>
+    <td><input type="checkbox" id="gsf" name="gsf" value="GSF"> </td>
   </tr>
   <tr>
-     <td>Cardiovascular Frequency</td>
-    <td> [Fill] </td>
+    <td>Age (Years) > 9.79</td>
+    <td><input type="checkbox" id="age" name="age" value="Age"> </td>
+  </tr>
+ <tr>
+    <td>Absolute Monocyte Count <= 53</td>
+    <td><input type="checkbox" id="amc" name="amc" value="AMC"> </td>
+  </tr>
+ <tr>
+    <td>Absolute Neutrophil Count <= 55</td>
+    <td><input type="checkbox" id="anc" name="anc" value="ANC"> </td>
+  </tr>
+ <tr>
+    <td>Leukocyte Count <= 650</td>
+    <td><input type="checkbox" id="leuk" name="leuk" value="Leukocytes"> </td>
+  </tr>
+ <tr>
+    <td>Days Since Chemotherapy Treatment > 10.5</td>
+    <td><input type="checkbox" id="days" name="days" value="Days"> </td>
+  </tr>
+ <tr>
+    <td>Sex = Female</td>
+    <td><input type="checkbox" id="sex" name="sex" value="Sex"> </td>
   </tr>
 </table>
 
 
-<div> Button: Calculate </div>
+<div> Risk Score:  </div>
+<div> Risk Category:  </div>
 
 <!--
 You can use the [editor on GitHub](https://github.com/jjschnur/FNmodel/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
