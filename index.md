@@ -23,17 +23,17 @@
 <script>
  function changeScore(id) {
  
-  var hemat = document.getElementById("hemat");
-  var relapse = document.getElementById("relapse");
-  var hemo = document.getElementById("hemo");
-  var platelets = document.getElementById("platelets");
-  var gsf = document.getElementById("gsf");
-  var age = document.getElementById("age");
-  var amc = document.getElementById("amc");
-  var anc = document.getElementById("anc");
-  var leuk = document.getElementById("leuk");
-  var days = document.getElementById("days");
-  var sex = document.getElementById("sex");
+  var hemat = JSON.parse(document.getElementById("hemat"));
+  var relapse = JSON.parse(document.getElementById("relapse"));
+  var hemo = JSON.parse(document.getElementById("hemo"));
+  var platelets = JSON.parse(document.getElementById("platelets"));
+  var gsf = JSON.parse(document.getElementById("gsf"));
+  var age = JSON.parse(document.getElementById("age"));
+  var amc = JSON.parse(document.getElementById("amc"));
+  var anc = JSON.parse(document.getElementById("anc"));
+  var leuk = JSON.parse(document.getElementById("leuk"));
+  var days = JSON.parse(document.getElementById("days"));
+  var sex = JSON.parse(document.getElementById("sex"));
   var const = -3.228;
   
   var risk = 1/(1 + Math.exp(-(hemat+relapse+hemo+platelets+gsf+age+amc+anc+leuk+days+sex+const)))
@@ -57,47 +57,47 @@
   </tr>
  <tr>
     <td>Hematological Malignancy</td>
-    <td><input type="checkbox" id="hemat" name="hemat" value=1.496> </td>
+    <td><input type="checkbox" id="hemat" name="hemat" value="1.496"> </td>
   </tr>
  <tr>
     <td>Cancer Relapse</td>
-    <td><input type="checkbox" id="relapse" name="relapse" value=1.162> </td>
+    <td><input type="checkbox" id="relapse" name="relapse" value="1.162"> </td>
   </tr>
  <tr>
     <td>Hemoglobin <= 6.95 g/dL</td>
-    <td><input type="checkbox" id="hemo" name="hemo" value=1.048> </td>
+    <td><input type="checkbox" id="hemo" name="hemo" value="1.048"> </td>
   </tr>
  <tr>
     <td>Platelets <= 79,000/μL</td>
-    <td><input type="checkbox" id="platelets" name="platelets" value=0.89> </td>
+    <td><input type="checkbox" id="platelets" name="platelets" value="0.89"> </td>
   </tr>
  <tr>
     <td>Growth Stimulating Factor</td>
-    <td><input type="checkbox" id="gsf" name="gsf" value=0.748> </td>
+    <td><input type="checkbox" id="gsf" name="gsf" value="0.748"> </td>
   </tr>
   <tr>
     <td>Age (Years) > 9.79</td>
-    <td><input type="checkbox" id="age" name="age" value=0.596> </td>
+    <td><input type="checkbox" id="age" name="age" value="0.596"> </td>
   </tr>
  <tr>
     <td>Absolute Monocyte Count <= 53</td>
-    <td><input type="checkbox" id="amc" name="amc" value=0.514> </td>
+    <td><input type="checkbox" id="amc" name="amc" value="0.514"> </td>
   </tr>
  <tr>
     <td>Absolute Neutrophil Count <= 55</td>
-    <td><input type="checkbox" id="anc" name="anc" value=0.178> </td>
+    <td><input type="checkbox" id="anc" name="anc" value="0.178"> </td>
   </tr>
  <tr>
     <td>Leukocyte Count <= 650</td>
-    <td><input type="checkbox" id="leuk" name="leuk" value=0.417> </td>
+    <td><input type="checkbox" id="leuk" name="leuk" value="0.417"> </td>
   </tr>
  <tr>
     <td>Days Since Chemotherapy Treatment > 10.5</td>
-    <td><input type="checkbox" id="days" name="days" value=0.031> </td>
+    <td><input type="checkbox" id="days" name="days" value="0.031"> </td>
   </tr>
  <tr>
     <td>Sex = Female</td>
-    <td><input type="checkbox" id="sex" name="sex" value=0.477> </td>
+    <td><input type="checkbox" id="sex" name="sex" value="0.477"> </td>
   </tr>
 </table>
 
