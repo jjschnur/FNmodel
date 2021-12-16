@@ -36,7 +36,7 @@
   var leuk = parseFloat(document.getElementById("leuk").value) * document.getElementById("leuk").checked;
   var days = parseFloat(document.getElementById("days").value) * document.getElementById("days").checked;
   var sex = parseFloat(document.getElementById("sex").value) * document.getElementById("sex").checked;
-  var const = -3.228;
+  let const = -3.228;
   
   var risk = (1/(1 + Math.exp(-(hemat+relapse+hemo+platelets+gsf+age+amc+anc+leuk+days+sex+const))).toFixed(4);
   var level;
