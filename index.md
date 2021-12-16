@@ -5,7 +5,9 @@
  h4 {text-align: left;}
  ol, li {text-align: left;}
  table {text-align: left;}
- div {text-align: left;}
+ div {text-align: left;
+      display: inline-block;
+ }
  .button {
   border: none;
   color: white;
@@ -39,7 +41,7 @@
   var risk = (1/(1 + Math.exp(-(hemat+relapse+hemo+platelets+gsf+age+amc+anc+leuk+days+sex+const))).toFixed(4);
   if(risk >= 0.3820) var level = "    (High Risk)";
   else var level = "    (Low Risk)";
-  id.innerHTML = risk + level;
+  id.innerHTML = "Risk Score: " + risk + level;
  }
 </script>
 
@@ -105,7 +107,7 @@
 
 <div>  
  <button class="button" onclick="changeScore(riskscore)"> Calculate Score </button>
- Risk Score: <p id="riskscore"> 0 </p>
+ <p id="riskscore"> Risk Score: 0 </p>
 </div>
 
 <!--
