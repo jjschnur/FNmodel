@@ -11,11 +11,11 @@
  .button {
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 15px 15px;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 2px 2px;
   cursor: pointer;
   background-color: #008CBA;
 }
@@ -107,9 +107,9 @@
   let risk = (1/(1 + Math.exp(-(hemat+relapse+hemo+platelets+gsf+age+amc+anc+leuk+days+sex+constant)))).toFixed(4);
   var level;
   if(risk >= 0.3820){
-      let level = "    (High Risk)";
+      var level = "    (High Risk)";
   }else {
-      let level = "    (Low Risk)";
+      var level = "    (Low Risk)";
   }
   document.getElementById("riskscore").innerHTML = "Risk Score: " + risk + level;
  }
