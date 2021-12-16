@@ -84,7 +84,7 @@
 
 <div>  
  <button style="float:left;" class="button" id="calcbutton"> Calculate Score </button>
- <p style="float:right;" id="riskscore">Risk Score: N/A </p>
+ <p style="float:right; padding: 15px 15px;" id="riskscore">Risk Score: N/A </p>
 </div>
 
 <!-- JavaScript Stuff -->
