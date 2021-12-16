@@ -39,8 +39,12 @@
   var const = -3.228;
   
   var risk = (1/(1 + Math.exp(-(hemat+relapse+hemo+platelets+gsf+age+amc+anc+leuk+days+sex+const))).toFixed(4);
-  if(risk >= 0.3820) var level = "    (High Risk)";
-  else var level = "    (Low Risk)";
+  var level;
+  if(risk >= 0.3820){
+      level = "    (High Risk)";
+  }else {
+      level = "    (Low Risk)";
+  }
   document.getElementById("riskscore").innerHTML = "Risk Score: " + risk + level;
  }
 </script>
@@ -107,7 +111,7 @@
 
 <div>  
  <button style="float:left;" class="button" onclick="changeScore()"> Calculate Score </button>
- <p style="float:left;" id="riskscore">Risk Score: N/A </p>
+ <p style="float:right;" id="riskscore">Risk Score: N/A </p>
 </div>
 
 <!--
