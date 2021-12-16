@@ -23,7 +23,7 @@
 
 <!-- JavaScript Stuff -->
 <script>
- function changeScore(id) {
+ function changeScore() {
  
   var hemat = parseFloat(document.getElementById("hemat").value) * document.getElementById("hemat").checked;
   var relapse = parseFloat(document.getElementById("relapse").value) * document.getElementById("relapse").checked;
@@ -41,6 +41,7 @@
   var risk = (1/(1 + Math.exp(-(hemat+relapse+hemo+platelets+gsf+age+amc+anc+leuk+days+sex+const))).toFixed(4);
   if(risk >= 0.3820) var level = "    (High Risk)";
   else var level = "    (Low Risk)";
+  var id = "riskscore";
   id.innerHTML = "Risk Score: " + risk + level;
  }
 </script>
@@ -106,8 +107,8 @@
 </table>
 
 <div>  
- <button class="button" onclick="changeScore(riskscore)"> Calculate Score </button>
- <p id="riskscore"> Risk Score: 0 </p>
+ <button style="float:left;" class="button" onclick="changeScore()"> Calculate Score </button>
+ <p style="float:left;" id="riskscore">Risk Score: 0</p>
 </div>
 
 <!--
