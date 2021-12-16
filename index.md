@@ -11,13 +11,12 @@
   border: none;
   color: white;
   padding: 15px 15px;
-  text-decoration: none;
-  //display: inline-block;
-  font-size: 16px;
-  //margin: 2px 2px;
+  text-decoration: none; //display: inline-block;
+  font-size: 16px; //margin: 2px 2px;
   cursor: pointer;
   background-color: #008CBA;
 }
+p {text-align: left;}
 </style>
 
 
