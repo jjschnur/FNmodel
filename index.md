@@ -38,7 +38,7 @@
   var sex = parseFloat(document.getElementById("sex").value) * document.getElementById("sex").checked;
   let constant = -3.228;
   
-  let risk = (1/(1 + Math.exp(-(hemat+relapse+hemo+platelets+gsf+age+amc+anc+leuk+days+sex+constant))).toFixed(4);
+  let risk = (1/(1 + Math.exp(-(hemat+relapse+hemo+platelets+gsf+age+amc+anc+leuk+days+sex+constant)))).toFixed(4);
   var level;
   if(risk >= 0.3820){
       let level = "    (High Risk)";
