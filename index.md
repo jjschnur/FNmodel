@@ -21,9 +21,9 @@ p {text-align: left;}
 
 
 <!-- HTML Stuff -->
-### Risk Prediction for Septic Shock and/or Bacteremia Applied to Pediatric Oncology Patients Presenting with Fever and Neutropenia
+<h2> Risk Prediction for Septic Shock and/or Bacteremia <br> Applied to Pediatric Oncology Patients <br> Presenting with Fever and Neutropenia </h2>
 
-#### Instructions:
+<h4> Instructions: </h4>
 <ol>
  <li>Check each risk factor that applies to your patient in the table.</li>
  <li>Click "Calculate Score" button to generate risk output.</li>
