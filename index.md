@@ -5,16 +5,16 @@
  h4 {text-align: left;}
  ol, li {text-align: left;}
  table {text-align: left;}
- div {text-align: left;
+ div {text-align: right;
       display: inline-block;
  }
  .button {
   border: none;
   color: white;
-  padding: 15px 15px;
+  //padding: 15px 15px;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  //display: inline-block;
+  //font-size: 16px;
   //margin: 2px 2px;
   cursor: pointer;
   background-color: #008CBA;
