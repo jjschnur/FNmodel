@@ -23,21 +23,23 @@
 <script>
  function changeScore(id) {
  
-  var hemat = JSON.parse(document.getElementById("hemat").value);
-  var relapse = JSON.parse(document.getElementById("relapse").value);
-  var hemo = JSON.parse(document.getElementById("hemo").value);
-  var platelets = JSON.parse(document.getElementById("platelets").value);
-  var gsf = JSON.parse(document.getElementById("gsf").value);
-  var age = JSON.parse(document.getElementById("age").value);
-  var amc = JSON.parse(document.getElementById("amc").value);
-  var anc = JSON.parse(document.getElementById("anc").value);
-  var leuk = JSON.parse(document.getElementById("leuk").value);
-  var days = JSON.parse(document.getElementById("days").value);
-  var sex = JSON.parse(document.getElementById("sex").value);
+  var hemat = JSON.parse(document.getElementById("hemat").value) * document.getElementById("hemat").checked;
+  var relapse = JSON.parse(document.getElementById("relapse").value) * document.getElementById("relapse").checked;
+  var hemo = JSON.parse(document.getElementById("hemo").value) * document.getElementById("hemo").checked;
+  var platelets = JSON.parse(document.getElementById("platelets").value) * document.getElementById("platelets").checked;
+  var gsf = JSON.parse(document.getElementById("gsf").value) * document.getElementById("gsf").checked;
+  var age = JSON.parse(document.getElementById("age").value) * document.getElementById("age").checked;
+  var amc = JSON.parse(document.getElementById("amc").value) * document.getElementById("amc").checked;
+  var anc = JSON.parse(document.getElementById("anc").value) * document.getElementById("anc").checked;
+  var leuk = JSON.parse(document.getElementById("leuk").value) * document.getElementById("leuk").checked;
+  var days = JSON.parse(document.getElementById("days").value) * document.getElementById("days").checked;
+  var sex = JSON.parse(document.getElementById("sex").value) * document.getElementById("sex").checked;
   var const = -3.228;
   
-  var risk = 1/(1 + Math.exp(-(hemat+relapse+hemo+platelets+gsf+age+amc+anc+leuk+days+sex+const)))
-  id.innerHTML = risk;
+  var risk = (1/(1 + Math.exp(-(hemat+relapse+hemo+platelets+gsf+age+amc+anc+leuk+days+sex+const))).toFixed(4);
+  if(risk >= 0.3820) var level = "    (High Risk)";
+  else var level = "    (Low Risk)";
+  id.innerHTML = risk + level;
  }
 </script>
 
@@ -101,9 +103,10 @@
   </tr>
 </table>
 
-<div>  <button class="button" onclick="changeScore(riskscore)"> Calculate Score </button> </div>
-<div> Risk Score: <p id="riskscore"> 0 </p> </div>
-<div> Risk Category:  <p id="riskcat"> N/A </p> </div>
+<div>  
+ <button class="button" onclick="changeScore(riskscore)"> Calculate Score </button>
+ Risk Score: <p id="riskscore"> 0 </p>
+</div>
 
 <!--
 You can use the [editor on GitHub](https://github.com/jjschnur/FNmodel/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
