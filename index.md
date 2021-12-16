@@ -23,10 +23,8 @@
 
 <!-- JavaScript Stuff -->
 <script>
- document.getElementById("calcbutton").addEventListener("click", changeScore);
  
  function changeScore(){
- 
   var hemat = parseFloat(document.getElementById("hemat").value) * document.getElementById("hemat").checked;
   var relapse = parseFloat(document.getElementById("relapse").value) * document.getElementById("relapse").checked;
   var hemo = parseFloat(document.getElementById("hemo").value) * document.getElementById("hemo").checked;
@@ -49,6 +47,9 @@
   }
   document.getElementById("riskscore").innerHTML = "Risk Score: " + risk + level;
  }
+ 
+ document.getElementById("calcbutton").addEventListener("click", changeScore);
+ 
 </script>
 
 <!-- HTML Stuff -->
