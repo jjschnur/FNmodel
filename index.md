@@ -21,34 +21,6 @@
 }
 </style>
 
-<!-- JavaScript Stuff -->
-<script>
- function changeScore() {
- 
-  var hemat = parseFloat(document.getElementById("hemat").value) * document.getElementById("hemat").checked;
-  var relapse = parseFloat(document.getElementById("relapse").value) * document.getElementById("relapse").checked;
-  var hemo = parseFloat(document.getElementById("hemo").value) * document.getElementById("hemo").checked;
-  var platelets = parseFloat(document.getElementById("platelets").value) * document.getElementById("platelets").checked;
-  var gsf = parseFloat(document.getElementById("gsf").value) * document.getElementById("gsf").checked;
-  var age = parseFloat(document.getElementById("age").value) * document.getElementById("age").checked;
-  var amc = parseFloat(document.getElementById("amc").value) * document.getElementById("amc").checked;
-  var anc = parseFloat(document.getElementById("anc").value) * document.getElementById("anc").checked;
-  var leuk = parseFloat(document.getElementById("leuk").value) * document.getElementById("leuk").checked;
-  var days = parseFloat(document.getElementById("days").value) * document.getElementById("days").checked;
-  var sex = parseFloat(document.getElementById("sex").value) * document.getElementById("sex").checked;
-  var const = -3.228;
-  
-  var risk = (1/(1 + Math.exp(-(hemat+relapse+hemo+platelets+gsf+age+amc+anc+leuk+days+sex+const))).toFixed(4);
-  var level;
-  if(risk >= 0.3820){
-      level = "    (High Risk)";
-  }else {
-      level = "    (Low Risk)";
-  }
-  document.getElementById("riskscore").innerHTML = "Risk Score: " + risk + level;
- }
-</script>
-
 <!-- HTML Stuff -->
 ### Risk Prediction for Septic Shock and/or Bacteremia Applied to Pediatric Oncology Patients Presenting with Fever and Neutropenia
 
@@ -113,6 +85,34 @@
  <button style="float:left;" class="button" onclick="changeScore()"> Calculate Score </button>
  <p style="float:right;" id="riskscore">Risk Score: N/A </p>
 </div>
+
+<!-- JavaScript Stuff -->
+<script>
+ function changeScore(){
+ 
+  var hemat = parseFloat(document.getElementById("hemat").value) * document.getElementById("hemat").checked;
+  var relapse = parseFloat(document.getElementById("relapse").value) * document.getElementById("relapse").checked;
+  var hemo = parseFloat(document.getElementById("hemo").value) * document.getElementById("hemo").checked;
+  var platelets = parseFloat(document.getElementById("platelets").value) * document.getElementById("platelets").checked;
+  var gsf = parseFloat(document.getElementById("gsf").value) * document.getElementById("gsf").checked;
+  var age = parseFloat(document.getElementById("age").value) * document.getElementById("age").checked;
+  var amc = parseFloat(document.getElementById("amc").value) * document.getElementById("amc").checked;
+  var anc = parseFloat(document.getElementById("anc").value) * document.getElementById("anc").checked;
+  var leuk = parseFloat(document.getElementById("leuk").value) * document.getElementById("leuk").checked;
+  var days = parseFloat(document.getElementById("days").value) * document.getElementById("days").checked;
+  var sex = parseFloat(document.getElementById("sex").value) * document.getElementById("sex").checked;
+  var const = -3.228;
+  
+  var risk = (1/(1 + Math.exp(-(hemat+relapse+hemo+platelets+gsf+age+amc+anc+leuk+days+sex+const))).toFixed(4);
+  var level;
+  if(risk >= 0.3820){
+      level = "    (High Risk)";
+  }else {
+      level = "    (Low Risk)";
+  }
+  document.getElementById("riskscore").innerHTML = "Risk Score: " + risk + level;
+ }
+</script>
 
 <!--
 You can use the [editor on GitHub](https://github.com/jjschnur/FNmodel/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
