@@ -32,48 +32,61 @@ p {text-align: left;}
 <table>
   <tr>
     <th>Predictor</th>
+    <th>Points</th>
     <th>Check if true:</th>
   </tr>
- <tr>
-    <td>Hematological Malignancy</td>
-    <td><input type="checkbox" id="hemat" name="hemat" value="11"> </td>
-  </tr>
- <tr>
+  <tr>
     <td>Cancer Relapse</td>
+    <th>11</th>
     <td><input type="checkbox" id="relapse" name="relapse" value="11"> </td>
   </tr>
  <tr>
+    <td>Hematological Malignancy</td>
+    <th>11</th>
+    <td><input type="checkbox" id="hemat" name="hemat" value="11"> </td>
+  </tr>
+ <tr>
     <td>Hemoglobin <u><</u> 6.95 g/dL</td>
+    <th>10</th>
     <td><input type="checkbox" id="hemo" name="hemo" value="10"> </td>
   </tr>
  <tr>
     <td>Platelets <u><</u> 79,000/μL</td>
+    <th>9</th>
     <td><input type="checkbox" id="platelets" name="platelets" value="9"> </td>
   </tr>
   <tr>
     <td>Age (Years) > 9.79</td>
+    <th>6</th>
     <td><input type="checkbox" id="age" name="age" value="6"> </td>
   </tr>
  <tr>
     <td>Absolute Monocyte Count <u><</u> 53</td>
+    <th>6</th>
     <td><input type="checkbox" id="amc" name="amc" value="6"> </td>
   </tr>
  <tr>
-    <td>Absolute Neutrophil Count <u><</u> 55</td>
-    <td><input type="checkbox" id="anc" name="anc" value="2"> </td>
+    <td>Sex = Female</td>
+    <th>5</th>
+    <td><input type="checkbox" id="sex" name="sex" value="5"> </td>
   </tr>
  <tr>
     <td>Leukocyte Count <u><</u> 650</td>
+    <th>4</th>
     <td><input type="checkbox" id="leuk" name="leuk" value="4"> </td>
   </tr>
  <tr>
-    <td>Days Since Chemotherapy Treatment > 10.5</td>
-    <td><input type="checkbox" id="days" name="days" value="0"> </td>
+    <td>Absolute Neutrophil Count <u><</u> 55</td>
+    <th>2</th>
+    <td><input type="checkbox" id="anc" name="anc" value="2"> </td>
   </tr>
+ <!--
  <tr>
-    <td>Sex = Female</td>
-    <td><input type="checkbox" id="sex" name="sex" value="5"> </td>
-  </tr>
+    <td>Days Since Chemotherapy Treatment > 10.5</td>
+    <th>0</th>
+    <td><input type="checkbox" id="days" name="days" value="0"> </td>
+  </tr> 
+-->
 </table>
 
 <div>  
@@ -90,17 +103,16 @@ p {text-align: left;}
   var relapse = parseFloat(document.getElementById("relapse").value) * document.getElementById("relapse").checked;
   var hemo = parseFloat(document.getElementById("hemo").value) * document.getElementById("hemo").checked;
   var platelets = parseFloat(document.getElementById("platelets").value) * document.getElementById("platelets").checked;
-  var gsf = parseFloat(document.getElementById("gsf").value) * document.getElementById("gsf").checked;
   var age = parseFloat(document.getElementById("age").value) * document.getElementById("age").checked;
   var amc = parseFloat(document.getElementById("amc").value) * document.getElementById("amc").checked;
   var anc = parseFloat(document.getElementById("anc").value) * document.getElementById("anc").checked;
   var leuk = parseFloat(document.getElementById("leuk").value) * document.getElementById("leuk").checked;
-  var days = parseFloat(document.getElementById("days").value) * document.getElementById("days").checked;
+  <!-- var days = parseFloat(document.getElementById("days").value) * document.getElementById("days").checked; -->
   var sex = parseFloat(document.getElementById("sex").value) * document.getElementById("sex").checked;
   <!-- let constant = -3.228; -->
   
   <!-- let risk = (1/(1 + Math.exp(-(hemat+relapse+hemo+platelets+gsf+age+amc+anc+leuk+days+sex+constant)))).toFixed(4); -->
- let risk = (hemat+relapse+hemo+platelets+gsf+age+amc+anc+leuk+days+sex).toFixed();
+ let risk = (hemat+relapse+hemo+platelets+age+amc+anc+leuk+sex).toFixed();
   var level;
   if(risk >= 23){
       var level = "    (High Risk)";
