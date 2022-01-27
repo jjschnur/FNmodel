@@ -37,47 +37,47 @@ p {text-align: left;}
   </tr>
   <tr>
     <td>Cancer Relapse</td>
-    <th>11</th>
+    <td>11</td>
     <td><input type="checkbox" id="relapse" name="relapse" value="11"> </td>
   </tr>
  <tr>
     <td>Hematological Malignancy</td>
-    <th>11</th>
+    <td>11</td>
     <td><input type="checkbox" id="hemat" name="hemat" value="11"> </td>
   </tr>
  <tr>
     <td>Hemoglobin <u><</u> 6.95 g/dL</td>
-    <th>10</th>
+    <td>10</td>
     <td><input type="checkbox" id="hemo" name="hemo" value="10"> </td>
   </tr>
  <tr>
     <td>Platelets <u><</u> 79,000/μL</td>
-    <th>9</th>
+    <td>9</td>
     <td><input type="checkbox" id="platelets" name="platelets" value="9"> </td>
   </tr>
   <tr>
     <td>Age (Years) > 9.79</td>
-    <th>6</th>
+    <td>6</td>
     <td><input type="checkbox" id="age" name="age" value="6"> </td>
   </tr>
  <tr>
     <td>Absolute Monocyte Count <u><</u> 53</td>
-    <th>6</th>
+    <td>6</td>
     <td><input type="checkbox" id="amc" name="amc" value="6"> </td>
   </tr>
  <tr>
     <td>Sex = Female</td>
-    <th>5</th>
+    <td>5</td>
     <td><input type="checkbox" id="sex" name="sex" value="5"> </td>
   </tr>
  <tr>
     <td>Leukocyte Count <u><</u> 650</td>
-    <th>4</th>
+    <td>4</td>
     <td><input type="checkbox" id="leuk" name="leuk" value="4"> </td>
   </tr>
  <tr>
     <td>Absolute Neutrophil Count <u><</u> 55</td>
-    <th>2</th>
+    <td>2</td>
     <td><input type="checkbox" id="anc" name="anc" value="2"> </td>
   </tr>
  <!--
