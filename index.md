@@ -36,53 +36,50 @@ p {text-align: left;}
   </tr>
  <tr>
     <td>Hematological Malignancy</td>
-    <td><input type="checkbox" id="hemat" name="hemat" value="1.496"> </td>
+    <td><input type="checkbox" id="hemat" name="hemat" value="11"> </td>
   </tr>
  <tr>
     <td>Cancer Relapse</td>
-    <td><input type="checkbox" id="relapse" name="relapse" value="1.162"> </td>
+    <td><input type="checkbox" id="relapse" name="relapse" value="11"> </td>
   </tr>
  <tr>
     <td>Hemoglobin <u><</u> 6.95 g/dL</td>
-    <td><input type="checkbox" id="hemo" name="hemo" value="1.048"> </td>
+    <td><input type="checkbox" id="hemo" name="hemo" value="10"> </td>
   </tr>
  <tr>
     <td>Platelets <u><</u> 79,000/μL</td>
-    <td><input type="checkbox" id="platelets" name="platelets" value="0.89"> </td>
-  </tr>
- <tr>
-    <td>Growth Stimulating Factor</td>
-    <td><input type="checkbox" id="gsf" name="gsf" value="0.748"> </td>
+    <td><input type="checkbox" id="platelets" name="platelets" value="9"> </td>
   </tr>
   <tr>
     <td>Age (Years) > 9.79</td>
-    <td><input type="checkbox" id="age" name="age" value="0.596"> </td>
+    <td><input type="checkbox" id="age" name="age" value="6"> </td>
   </tr>
  <tr>
     <td>Absolute Monocyte Count <u><</u> 53</td>
-    <td><input type="checkbox" id="amc" name="amc" value="0.514"> </td>
+    <td><input type="checkbox" id="amc" name="amc" value="6"> </td>
   </tr>
  <tr>
     <td>Absolute Neutrophil Count <u><</u> 55</td>
-    <td><input type="checkbox" id="anc" name="anc" value="0.178"> </td>
+    <td><input type="checkbox" id="anc" name="anc" value="2"> </td>
   </tr>
  <tr>
     <td>Leukocyte Count <u><</u> 650</td>
-    <td><input type="checkbox" id="leuk" name="leuk" value="0.417"> </td>
+    <td><input type="checkbox" id="leuk" name="leuk" value="4"> </td>
   </tr>
  <tr>
     <td>Days Since Chemotherapy Treatment > 10.5</td>
-    <td><input type="checkbox" id="days" name="days" value="0.031"> </td>
+    <td><input type="checkbox" id="days" name="days" value="0"> </td>
   </tr>
  <tr>
     <td>Sex = Female</td>
-    <td><input type="checkbox" id="sex" name="sex" value="0.477"> </td>
+    <td><input type="checkbox" id="sex" name="sex" value="5"> </td>
   </tr>
 </table>
 
 <div>  
  <button class="button" id="calcbutton"> Calculate Score </button>
  <p id="riskscore">Risk Score: N/A </p>
+ <p> A Risk Score over 22 points indicates "High Risk."</p>
 </div>
 
 <!-- JavaScript Stuff -->
@@ -100,11 +97,12 @@ p {text-align: left;}
   var leuk = parseFloat(document.getElementById("leuk").value) * document.getElementById("leuk").checked;
   var days = parseFloat(document.getElementById("days").value) * document.getElementById("days").checked;
   var sex = parseFloat(document.getElementById("sex").value) * document.getElementById("sex").checked;
-  let constant = -3.228;
+  <!-- let constant = -3.228; -->
   
-  let risk = (1/(1 + Math.exp(-(hemat+relapse+hemo+platelets+gsf+age+amc+anc+leuk+days+sex+constant)))).toFixed(4);
+  <!-- let risk = (1/(1 + Math.exp(-(hemat+relapse+hemo+platelets+gsf+age+amc+anc+leuk+days+sex+constant)))).toFixed(4); -->
+ let risk = (hemat+relapse+hemo+platelets+gsf+age+amc+anc+leuk+days+sex).toFixed();
   var level;
-  if(risk >= 0.3820){
+  if(risk >= 23){
       var level = "    (High Risk)";
   }else {
       var level = "    (Low Risk)";
