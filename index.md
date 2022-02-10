@@ -92,7 +92,7 @@ p {text-align: left;}
 <div>  
  <button class="button" id="calcbutton"> Calculate Score </button>
  <p id="riskscore">Risk Score: N/A </p>
- <p> A Risk Score over 22 points indicates "High Risk."</p>
+ <p> A Risk Score below 23 points indicates "Low Risk."</p>
 </div>
 
 <!-- JavaScript Stuff -->
